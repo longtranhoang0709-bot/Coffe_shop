@@ -1,0 +1,10 @@
+"use strict";
+const express = require("express");
+const auth = require("../middlewares/authMiddleware");
+const roles = require("../middlewares/roleMiddleware");
+const c = require("../controllers/inventoryController");
+const r = express.Router();
+r.use(auth, roles("ADMIN", "STAFF"));
+r.get("/", c.list);
+r.patch("/:id", roles("ADMIN"), c.patch);
+module.exports = r;

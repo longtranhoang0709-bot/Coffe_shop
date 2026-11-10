@@ -1,0 +1,11 @@
+"use strict";
+const express = require("express");
+const auth = require("../middlewares/authMiddleware");
+const roles = require("../middlewares/roleMiddleware");
+const c = require("../controllers/shippingController");
+const r = express.Router();
+r.get("/zones", c.publicList);
+r.get("/admin/zones", auth, roles("ADMIN"), c.adminList);
+r.post("/admin/zones", auth, roles("ADMIN"), c.create);
+r.patch("/admin/zones/:id", auth, roles("ADMIN"), c.update);
+module.exports = r;

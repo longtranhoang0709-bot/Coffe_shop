@@ -13,6 +13,17 @@ const PORT = Number(process.env.PORT) || 3000;
 
 const authRoutes = require('./routes/authRoutes');
 const errorMiddleware = require('./middlewares/errorMiddleware');
+const userRoutes = require("./routes/userRoutes");
+const path = require("path");
+const categoryRoutes = require("./routes/categoryRoutes");
+const productRoutes = require("./routes/productRoutes");
+const cartRoutes = require("./routes/cartRoutes");
+const orderRoutes = require("./routes/orderRoutes");
+const inventoryRoutes = require("./routes/inventoryRoutes");
+const shippingRoutes = require("./routes/shippingRoutes");
+const promotionRoutes = require("./routes/promotionRoutes");
+const paymentRoutes = require("./routes/paymentRoutes");
+const reportRoutes = require("./routes/reportRoutes");
 
 // Cau hinh cho phep frontend ket noi
 app.use(
@@ -29,6 +40,23 @@ app.use(cookieParser());
 
 app.use('/api/auth', authRoutes);
 app.use(errorMiddleware);
+app.use("/api/users", userRoutes);
+app.use("/api/categories", categoryRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/cart", cartRoutes);
+app.use("/api/orders", orderRoutes);
+app.use("/api/inventory", inventoryRoutes);
+app.use("/api/shipping", shippingRoutes);
+app.use("/api/promotions", promotionRoutes);
+app.use("/api/payment", paymentRoutes);
+app.use("/api/reports", reportRoutes);
+
+
+// Cau hinh cho phep truy cap anh san pham tu frontend
+app.use(
+  "/uploads/products",
+  express.static(path.join(__dirname, "uploads", "products"))
+);
 
 // Trang kiem tra Backend
 app.get("/", (req, res) => {
