@@ -160,7 +160,7 @@ watch(params, load);
           :size="13"
           style="display: inline; vertical-align: middle"
         />
-        ĐÃ KẾT NỐI API</span
+        Menu</span
       >
     </div>
     <div v-if="loading" class="busy">Đang tải thực đơn...</div>

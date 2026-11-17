@@ -194,8 +194,7 @@ onMounted(load);
           ><span>Trạng thái</span><strong>{{ chosen.trang_thai }}</strong>
         </div>
         <p class="admin-hint">
-          Theo quy tắc Backend, không thể thay đổi tài khoản ADMIN qua các API
-          này.
+          Không thể thay đổi tài khoản ADMIN qua các API này.
         </p>
         <div v-if="chosen.vai_tro !== 'ADMIN'" class="admin-actions">
           <button

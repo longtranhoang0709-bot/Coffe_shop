@@ -103,8 +103,7 @@ async function submit() {
           <RouterLink to="/register">Đăng ký ngay</RouterLink>
         </p>
         <p class="auth-bottom" style="line-height: 1.7">
-          Quên mật khẩu? Tính năng đặt lại qua email sẽ được kết nối khi có API
-          tương ứng; hiện tại chưa khả dụng.
+          Quên mật khẩu?
         </p>
       </div>
     </div>
