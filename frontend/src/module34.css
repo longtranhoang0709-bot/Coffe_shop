@@ -1,0 +1,411 @@
+/* coffeShop - Frontend Module 3 (don hang) + Module 4 (VNPay). */
+.cs34-page {
+  padding-top: 75px;
+  padding-bottom: 110px;
+  min-height: 65vh;
+}
+.cs34-page-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 34px;
+}
+.cs34-page-head h1 {
+  font-size: clamp(45px, 6vw, 72px);
+  margin: 12px 0 8px;
+}
+.cs34-muted {
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
+  margin: 10px 0;
+}
+.cs34-inline-btn {
+  border: 0;
+  background: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
+.cs34-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 25px 0 28px;
+}
+.cs34-tabs button {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  padding: 11px 17px;
+  cursor: pointer;
+  font-size: 12px;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.cs34-tabs button:hover {
+  background: #f0ece6;
+}
+.cs34-tabs button.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+}
+.cs34-orders-list {
+  display: grid;
+  gap: 12px;
+}
+.cs34-order-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 27px 32px;
+}
+.cs34-order-card-left h3 {
+  font: 400 33px var(--font-display);
+  margin: 7px 0;
+}
+.cs34-order-card-left p {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 8px 0;
+}
+.cs34-order-card-left small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.cs34-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+.cs34-tag {
+  display: inline-block;
+  border: 1px solid #cfcac1;
+  background: #f8f5f0;
+  color: var(--ink);
+  font-size: 11px;
+  padding: 7px 10px;
+  letter-spacing: 0.02em;
+}
+.cs34-tag-good {
+  border-color: #b1c9b2;
+  background: #eff7ef;
+  color: #2f613e;
+}
+.cs34-pager,
+.cs34-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+.cs34-pager span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.cs34-order-body {
+  display: grid;
+  gap: 18px;
+}
+.cs34-panel {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 30px 34px;
+  min-width: 0;
+}
+.cs34-order-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.cs34-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.cs34-section-heading h2 {
+  font: 400 30px var(--font-display);
+  letter-spacing: -0.03em;
+  margin: 8px 0 0;
+}
+.cs34-price-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 13px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.cs34-price-line:last-child {
+  border-bottom: 0;
+}
+.cs34-price-line span {
+  color: var(--muted);
+}
+.cs34-price-line strong {
+  font-weight: 600;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.cs34-price-total {
+  font-size: 17px;
+}
+.cs34-price-total strong {
+  font: 400 25px var(--font-display);
+}
+.cs34-item-row {
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid var(--line);
+  padding: 19px 0;
+  font-size: 13px;
+}
+.cs34-item-row strong {
+  font-weight: 600;
+}
+.cs34-item-row div p,
+.cs34-item-row div small {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--muted);
+  display: block;
+  margin: 6px 0;
+}
+.cs34-item-row > strong {
+  white-space: nowrap;
+}
+.cs34-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3px;
+  list-style: none;
+  margin: 30px 0;
+  padding: 0;
+}
+.cs34-steps li {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: center;
+  position: relative;
+  color: #918c84;
+  font-size: 11px;
+  text-align: center;
+}
+.cs34-steps li:after {
+  content: "";
+  position: absolute;
+  left: 60%;
+  right: -40%;
+  top: 17px;
+  height: 1px;
+  background: var(--line);
+  z-index: 0;
+}
+.cs34-steps li:last-child:after {
+  display: none;
+}
+.cs34-steps li.done {
+  color: var(--ink);
+}
+.cs34-step-num {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background: #f5f2ed;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  z-index: 1;
+}
+.cs34-steps li.done .cs34-step-num {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: white;
+}
+.cs34-steps li.current .cs34-step-num {
+  box-shadow: 0 0 0 3px #e4ddd4;
+}
+.cs34-alert {
+  padding: 15px 18px;
+  border: 1px solid #decabe;
+  margin: 15px 0;
+  font-size: 13px;
+}
+.cs34-alert-warn {
+  background: #fff7f0;
+  color: #814c28;
+}
+.cs34-address {
+  padding: 12px 0;
+  line-height: 1.6;
+  font-size: 12px;
+}
+.cs34-search-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 15px;
+  align-items: end;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 28px;
+}
+.cs34-search-panel .field {
+  margin: 0;
+}
+.cs34-response {
+  margin-top: 22px;
+}
+.cs34-guest-result {
+  margin-top: 42px;
+}
+.cs34-guest-result > .cs34-section-heading {
+  margin: 0 0 20px;
+}
+.cs34-guest-result .cs34-actions {
+  margin-top: 10px;
+}
+.cs34-payment-layout {
+  display: grid;
+  place-items: center;
+}
+.cs34-payment-card {
+  border: 1px solid var(--line);
+  padding: 45px 55px;
+  background: #fff;
+  width: min(780px, 100%);
+  text-align: center;
+}
+.cs34-payment-card h1 {
+  font-size: clamp(34px, 5vw, 57px);
+  margin: 12px 0 22px;
+  line-height: 1.15;
+}
+.cs34-payment-icon {
+  width: 70px;
+  height: 70px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 23px;
+}
+.cs34-payment-icon.is-success {
+  color: #316b40;
+  border-color: #a1c9a7;
+  background: #eff7ef;
+}
+.cs34-payment-icon.is-failed {
+  color: #9a4535;
+  border-color: #ebbbb1;
+  background: #fff4ef;
+}
+.cs34-payment-details {
+  background: #f8f6f2;
+  text-align: left;
+  padding: 22px 27px;
+  margin: 26px 0;
+}
+.cs34-payment-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cs34-word-wrap {
+  overflow-wrap: anywhere;
+  min-width: 0;
+  max-width: 58%;
+}
+.cs34-footnote {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 25px 0 0;
+}
+.cs34-vnpay-label {
+  border: 1px solid var(--line);
+  padding: 5px 9px;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+@media (max-width: 800px) {
+  .cs34-order-columns {
+    grid-template-columns: 1fr;
+  }
+  .cs34-search-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cs34-search-panel button {
+    grid-column: 1/-1;
+  }
+  .cs34-page {
+    padding: 55px 0 80px;
+  }
+}
+@media (max-width: 540px) {
+  .cs34-page-head {
+    align-items: start;
+    flex-direction: column;
+  }
+  .cs34-order-card {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 22px;
+  }
+  .cs34-card-right {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .cs34-steps li {
+    font-size: 9px;
+  }
+  .cs34-steps li:after {
+    top: 15px;
+  }
+  .cs34-step-num {
+    width: 30px;
+    height: 30px;
+  }
+  .cs34-panel {
+    padding: 20px;
+  }
+  .cs34-search-panel {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .cs34-search-panel button {
+    grid-column: 1;
+  }
+  .cs34-payment-card {
+    padding: 27px 20px;
+  }
+  .cs34-payment-details {
+    padding: 14px;
+  }
+  .cs34-payment-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
